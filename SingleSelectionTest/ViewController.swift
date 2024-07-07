@@ -23,8 +23,10 @@ class ViewController: UIViewController {
         collectionView.register(UINib(nibName: "SingleSelectionCustomCell", bundle: nil), forCellWithReuseIdentifier: "SingleSelectionCustomCell")
 
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: collectionView.frame.width / 2 - 20 , height: 46)
+        layout.itemSize = CGSize(width: collectionView.frame.width - 24 , height: 46)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+        collectionView.collectionViewLayout = layout
+        layout.scrollDirection = .vertical
         collectionView.collectionViewLayout = layout
     }
 
