@@ -13,6 +13,8 @@
 		FB85195A2C3AA5730000F15F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FB8519592C3AA5730000F15F /* Base */; };
 		FB85195C2C3AA5740000F15F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB85195B2C3AA5740000F15F /* Assets.xcassets */; };
 		FB85195F2C3AA5740000F15F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FB85195E2C3AA5740000F15F /* Base */; };
+		FB8519682C3AA6DC0000F15F /* SingleSelectionCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8519662C3AA6DC0000F15F /* SingleSelectionCustomCell.swift */; };
+		FB8519692C3AA6DC0000F15F /* SingleSelectionCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB8519672C3AA6DC0000F15F /* SingleSelectionCustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FB85195B2C3AA5740000F15F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB85195E2C3AA5740000F15F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB8519602C3AA5740000F15F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB8519662C3AA6DC0000F15F /* SingleSelectionCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionCustomCell.swift; sourceTree = "<group>"; };
+		FB8519672C3AA6DC0000F15F /* SingleSelectionCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleSelectionCustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				FB8519542C3AA5730000F15F /* SceneDelegate.swift */,
 				FB8519562C3AA5730000F15F /* ViewController.swift */,
 				FB8519582C3AA5730000F15F /* Main.storyboard */,
+				FB8519662C3AA6DC0000F15F /* SingleSelectionCustomCell.swift */,
+				FB8519672C3AA6DC0000F15F /* SingleSelectionCustomCell.xib */,
 				FB85195B2C3AA5740000F15F /* Assets.xcassets */,
 				FB85195D2C3AA5740000F15F /* LaunchScreen.storyboard */,
 				FB8519602C3AA5740000F15F /* Info.plist */,
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB85195C2C3AA5740000F15F /* Assets.xcassets in Resources */,
+				FB8519692C3AA6DC0000F15F /* SingleSelectionCustomCell.xib in Resources */,
 				FB85195F2C3AA5740000F15F /* Base in Resources */,
 				FB85195A2C3AA5730000F15F /* Base in Resources */,
 			);
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB8519572C3AA5730000F15F /* ViewController.swift in Sources */,
+				FB8519682C3AA6DC0000F15F /* SingleSelectionCustomCell.swift in Sources */,
 				FB8519532C3AA5730000F15F /* AppDelegate.swift in Sources */,
 				FB8519552C3AA5730000F15F /* SceneDelegate.swift in Sources */,
 			);
