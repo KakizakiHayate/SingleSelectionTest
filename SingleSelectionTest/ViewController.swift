@@ -56,21 +56,23 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? SingleSelectionCustomCell {
             cell.layer.borderWidth = 2
             cell.layer.borderColor = UIColor.blue.cgColor
             cell.layer.cornerRadius = 10 // 角丸を設定
             cell.layer.masksToBounds = true
             cell.backgroundColor = UIColor.green // 背景色を緑に設定
+            cell.updateImage(imageName: "surveyDailyGoalsCheckButton") // 画像を切り替え
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? SingleSelectionCustomCell {
             cell.layer.borderWidth = 0 // 選択解除時にボーダーをリセット
             cell.layer.cornerRadius = 10 // 角丸をリセット
             cell.layer.masksToBounds = true
             cell.backgroundColor = .white // 背景色を白にリセット
+            cell.updateImage(imageName: selectionModes[indexPath.row][0]) // 元の画像に戻す
         }
     }
 }

@@ -36,4 +36,8 @@ extension SingleSelectionCustomCell {
         rightText.text = right
         uiImageView.image = UIImage(named: imageName)
     }
+
+    func updateImage(imageName: String) {
+        uiImageView.image = UIImage(named: imageName)
+    }
 }
