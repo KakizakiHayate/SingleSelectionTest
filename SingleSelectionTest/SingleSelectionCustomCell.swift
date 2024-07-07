@@ -23,6 +23,10 @@ class SingleSelectionCustomCell: UICollectionViewCell {
         leftText.text = ""
         rightText.text = ""
         uiImageView.image = UIImage()
+        layer.borderWidth = 0
+        layer.cornerRadius = 10 // 角丸をリセット
+        layer.masksToBounds = true
+        backgroundColor = .white
     }
 }
 

@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UINib(nibName: "SingleSelectionCustomCell", bundle: nil), forCellWithReuseIdentifier: "SingleSelectionCustomCell")
 
         let layout = UICollectionViewFlowLayout()
@@ -43,8 +44,33 @@ extension ViewController: UICollectionViewDataSource {
 
         if let cell = cell as? SingleSelectionCustomCell {
             cell.setupCell(imageName: selectionModes[indexPath.row][0], left: selectionModes[indexPath.row][1], right: selectionModes[indexPath.row][2])
+            cell.layer.borderWidth = 0 // 再利用時にボーダーをリセット
+            cell.layer.cornerRadius = 10 // 角丸をリセット
+            cell.layer.masksToBounds = true
+            cell.backgroundColor = .white
         }
 
         return cell
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            cell.layer.borderWidth = 2
+            cell.layer.borderColor = UIColor.blue.cgColor
+            cell.layer.cornerRadius = 10 // 角丸を設定
+            cell.layer.masksToBounds = true
+            cell.backgroundColor = UIColor.green // 背景色を緑に設定
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            cell.layer.borderWidth = 0 // 選択解除時にボーダーをリセット
+            cell.layer.cornerRadius = 10 // 角丸をリセット
+            cell.layer.masksToBounds = true
+            cell.backgroundColor = .white // 背景色を白にリセット
+        }
     }
 }
